@@ -3,9 +3,11 @@ package com.sda.json;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -18,7 +20,7 @@ public class Main {
         Person person3 = new Person("Tomasz", "Walizka", 66);
         Person person4 = new Person("Krzysziek", "Petarda", 80);
 
-        Address address1 = new Address("Bydgoszcz", "Krzywa") ;
+        Address address1 = new Address("Bydgoszcz", "Krzywa");
 
         Student student1 = new Student("Bob", "Oklahoma", address1);
         Student student2 = new Student("Richard", "Smith", address1);
@@ -42,11 +44,13 @@ public class Main {
 
         // lista osob - zapisac do jsona i do pliku
 
-        List<Person> personList = new LinkedList<>();
-        personList.add(person1);
-        personList.add(person2);
-        personList.add(person3);
-        personList.add(person4);
+//        List<Person> personList = new LinkedList<>();
+//        personList.add(person1);
+//        personList.add(person2);
+//        personList.add(person3);
+//        personList.add(person4);
+
+        List<Person> personList = Arrays.asList(person1, person2, person3, person4);
 
         String personListString = mapper.writeValueAsString(personList);
 
@@ -58,7 +62,7 @@ public class Main {
 
         // lista studentow zapisac do jsona i pliku
 
-        List <Student> studentList = new LinkedList<>();
+        List<Student> studentList = new LinkedList<>();
         studentList.add(student1);
         studentList.add(student2);
         studentList.add(student3);
@@ -72,6 +76,22 @@ public class Main {
             e.printStackTrace();
         }
 
+        //odczytaj obiekt i zmapuj
+
+        try {
+            Person person5 = mapper.readValue(new File("person.json"), Person.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        //jak przeczytac liste?
+
+        try {
+            Person[] personArray = mapper.readValue(new File("personList.json"), Person[].class);
+            System.out.println("personArray = " + Arrays.toString(personArray));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 }

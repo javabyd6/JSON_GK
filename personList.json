@@ -1,1 +1,22 @@
-[{"name":"Ryszard","lastName":"Kowalski","age":30},{"name":"Barnaba","lastName":"Walizka","age":122},{"name":"Tomasz","lastName":"Walizka","age":66},{"name":"Krzysziek","lastName":"Petarda","age":80}]
+[
+  {
+    "name": "Ryszard",
+    "lastName": "Kowalski",
+    "age": 30
+  },
+  {
+    "name": "Barnaba",
+    "lastName": "Walizka",
+    "age": 122
+  },
+  {
+    "name": "Tomasz",
+    "lastName": "Walizka",
+    "age": 66
+  },
+  {
+    "name": "Krzysziek",
+    "lastName": "Petarda",
+    "age": 80
+  }
+]

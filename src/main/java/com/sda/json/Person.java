@@ -6,6 +6,10 @@ private String name;
 private String lastName;
 private int age;
 
+    public Person (){
+
+    }
+
     public Person(String name, String lastName, int age) {
         this.name = name;
         this.lastName = lastName;
