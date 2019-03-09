@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Bob",
+    "lastName": "Oklahoma",
+    "address": {
+      "city": "Bydgoszcz",
+      "street": "Krzywa"
+    }
+  },
+  {
+    "name": "Richard",
+    "lastName": "Smith",
+    "address": {
+      "city": "Bydgoszcz",
+      "street": "Krzywa"
+    }
+  },
+  {
+    "name": "Tom",
+    "lastName": "Uruk",
+    "address": {
+      "city": "Bydgoszcz",
+      "street": "Krzywa"
+    }
+  },
+  {
+    "name": "Bamboo",
+    "lastName": "Tenderoo",
+    "address": {
+      "city": "Bydgoszcz",
+      "street": "Krzywa"
+    }
+  }
+]
